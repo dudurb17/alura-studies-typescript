@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./Button.module.scss";
 
-class Button extends React.Component<{ texto: string }> {
+class Button extends React.Component<{children:string}> {
   render() {
-    return <button className={style.botao}>{this.props.texto}</button>;
+    return <button className={style.botao}>{this.props.children}</button>;
   }
 }
 
