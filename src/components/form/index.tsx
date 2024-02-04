@@ -15,6 +15,10 @@ class Form extends React.Component<{
       ...tarefasAntigas,
       { ...this.state },
     ]);
+    this.setState({
+      tarefa: "",
+      tempo: "00:00",
+    });
   }
   render() {
     return (
