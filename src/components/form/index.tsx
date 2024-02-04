@@ -1,7 +1,16 @@
 import React from "react";
 import Button from "../Button";
 import style from "./Form.module.scss";
-class Form extends React.Component {
+class Form extends React.Component<{
+  setTarefas: React.Dispatch<
+    React.SetStateAction<
+      {
+        tarefa: string;
+        tempo: string;
+      }[]
+    >
+  >;
+}> {
   state = {
     tarefa: "",
     tempo: "00:00:00",
@@ -46,7 +55,7 @@ class Form extends React.Component {
             required
           />
         </div>
-        <Button>Adicionar</Button>
+        <Button type="submit">Adicionar</Button>
       </form>
     );
   }
