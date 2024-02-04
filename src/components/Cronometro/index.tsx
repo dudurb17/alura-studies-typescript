@@ -23,7 +23,13 @@ export default function Cronometro({ selecinado }: Props) {
       <div className={style.relogioWrapper}>
         <Relogio tempo={tempo} />
       </div>
-      <Button>Começar!</Button>
+      <Button
+        onClick={() => {
+          console.log("começando");
+        }}
+      >
+        Começar!
+      </Button>
     </div>
   );
 }
